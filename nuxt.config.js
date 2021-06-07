@@ -6,10 +6,10 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - hzgeek.com',
-    title: 'hzgeek.com',
+    titleTemplate: '%s - 衡中极客圈',
+    title: '衡中极客圈',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'zh-Hans-CN',
     },
     meta: [
       { charset: 'utf-8' },

@@ -126,5 +126,10 @@ export default {
         : "/imgs/name.svg";
     },
   },
+    head() {
+    return {
+      title: '首页',
+    };
+  },
 };
 </script>

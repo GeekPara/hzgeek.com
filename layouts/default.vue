@@ -43,7 +43,7 @@ export default {
           title: "青章浚的B站",
           href: "https://space.bilibili.com/155369896",
         },
-        { title: "荧惑 - Mars", href: "https://marspowered.com/" },
+        { title: "Mars", href: "https://marspowered.com/" },
         { title: "Rye Bread 博客", href: "https://www.ryebread.net/" },
         { title: "河北衡水中学", href: "http://www.hbhszx.cn/" },
       ],

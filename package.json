@@ -12,7 +12,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/markdownit": "^2.0.0",
     "core-js": "^3.9.1",
+    "markdown-it-emoji": "^2.0.0",
+    "markdown-it-github": "^0.5.0",
+    "markdown-it-github-toc": "^3.2.4",
+    "markdown-it-highlight": "^0.2.0",
     "nuxt": "^2.15.3"
   },
   "devDependencies": {

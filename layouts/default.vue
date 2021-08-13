@@ -1,6 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar fixed app clipped-left elevate-on-scroll color="primary lighten-2">
+    <v-app-bar
+      fixed
+      app
+      clipped-left
+      elevate-on-scroll
+      color="primary lighten-2"
+    >
       <v-toolbar-title color="white">衡中极客圈</v-toolbar-title>
       <v-spacer />
       <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
@@ -43,9 +49,22 @@ export default {
           title: "青章浚的B站",
           href: "https://space.bilibili.com/155369896",
         },
-        { title: "Mars", href: "https://marspowered.com/" },
-        { title: "Rye Bread 博客", href: "https://www.ryebread.net/" },
-        { title: "河北衡水中学", href: "http://www.hbhszx.cn/" },
+        {
+          title: "YouXam 博客",
+          href: "https://www.cnblogs.com/youxam",
+        },
+        {
+          title: "AwAmeow 博客",
+          href: "http://www.awameow.com"
+        },
+        {
+          title:"Gary 博客",
+          href:"https://www.cnblogs.com/rui-4825"
+        },
+        {
+          title: "衡水中学",
+          href: "http://hbhz.net/",
+        },
       ],
     };
   },

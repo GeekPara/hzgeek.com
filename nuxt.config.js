@@ -37,7 +37,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    "@nuxtjs/markdownit"
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -60,6 +61,19 @@ export default {
         }
       }
     }
+  },
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    typographer:true,
+    use: [
+      'markdown-it-github',
+      'markdown-it-github-toc',
+      'markdown-it-emoji',
+      'markdown-it-highlight',
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

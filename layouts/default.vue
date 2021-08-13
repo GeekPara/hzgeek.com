@@ -46,7 +46,7 @@ export default {
     return {
       links: [
         {
-          title: "青章浚的B站",
+          title: "青章浚 B站",
           href: "https://space.bilibili.com/155369896",
         },
         {
@@ -61,6 +61,10 @@ export default {
           title:"Gary 博客",
           href:"https://www.cnblogs.com/rui-4825"
         },
+        {
+          title:"淘宝者 B站",
+          href:"https://space.bilibili.com/500799994"
+        }
         {
           title: "衡水中学",
           href: "http://hbhz.net/",

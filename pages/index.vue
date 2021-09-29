@@ -1,80 +1,52 @@
-<template>
-  <v-container>
-    <!--主体：宽屏-->
-    <v-row class="my-16" v-if="$vuetify.breakpoint.mdAndUp">
-      <v-col cols="2" offset="3">
-        <v-img :src="logoImg"></v-img>
-      </v-col>
-      <v-col cols="4" align-self="center">
-        <div class="my-4 ml-4">
-          <img :src="nameImg" />
-        </div>
-        <p class="text-h6 text-secondery my-4 ml-4 text-no-wrap">
-          {{ subtitle }}
-        </p>
-      </v-col>
-    </v-row>
-    <!--主体：窄屏-->
-    <div v-else class="my-16">
-      <v-row class="my-4">
-        <v-col cols="6" offset="3">
-          <v-img :src="logoImg"></v-img>
-        </v-col>
-      </v-row>
-      <v-row class="my-4">
-        <v-col cols="8" offset="2">
-          <v-img :src="nameImg"></v-img>
-        </v-col>
-      </v-row>
-      <v-row class="my-4">
-        <v-col cols="12">
-          <p class="text-center text-h6 text-secondery">
-            {{ subtitle }}
-          </p>
-        </v-col>
-      </v-row>
-    </div>
-    <!--介绍：宽屏-->
-    <v-row v-if="$vuetify.breakpoint.mdAndUp" class="my-8">
-      <v-col cols="4" v-for="item in contents" :key="item.title">
-        <p class="text-h4">{{ item.title }}</p>
-        <p class="text-body-1">{{ item.text }}</p>
-      </v-col>
-    </v-row>
-    <!--介绍：窄屏-->
-    <div v-else class="my-8">
-      <v-row v-for="item in contents" :key="item.title">
-        <v-col cols="10" offset="1">
-          <p class="text-h4">{{ item.title }}</p>
-          <p class="text-body-1">{{ item.text }}</p>
-        </v-col>
-      </v-row>
-    </div>
-    <!--链接：宽屏-->
-    <v-row v-if="$vuetify.breakpoint.mdAndUp" class="my-8">
-      <v-col cols="6" offset="3">
-        <v-row>
-          <v-col cols="4" v-for="item in buttons" :key="item.title">
-            <v-btn :[item.type]="item.link" block x-large color="primary"
-              ><v-icon left>{{ item.icon }}</v-icon
-              >{{ item.title }}</v-btn
-            >
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-    <!--链接：窄屏-->
-    <div v-else class="my-8">
-      <v-row>
-        <v-col cols="8" offset="2" v-for="item in buttons" :key="item.title">
-          <v-btn :[item.type]="item.link" block x-large color="primary"
-            ><v-icon left>{{ item.icon }}</v-icon
-            >{{ item.title }}</v-btn
-          >
-        </v-col>
-      </v-row>
-    </div>
-  </v-container>
+<template lang="pug">
+v-container
+  // 主体：宽屏
+  v-row.my-16(v-if="$vuetify.breakpoint.mdAndUp")
+    v-col(cols="2" offset="3")
+      v-img(:src="logoImg")
+    v-col(cols="4" align-self="center")
+      .my-4.ml-4
+        img(:src="nameImg")
+      p.text-h6.text-secondery.my-4.ml-4.text-no-wrap {{ subtitle }}
+  // 主体：窄屏
+  .my-16(v-else)
+    v-row.my-4
+      v-col(cols="6" offset="3")
+        v-img(:src="logoImg")
+    v-row.my-4
+      v-col(cols="8" offset="2")
+        v-img(:src="nameImg")
+    v-row.my-4
+      v-col(cols="12")
+        p.text-center.text-h6.text-secondery {{ subtitle }}
+  // 介绍：宽屏
+  v-row.my-8(v-if="$vuetify.breakpoint.mdAndUp")
+    v-col(cols="4" v-for="item in contents" :key="item.title")
+      p.text-h4 {{ item.title }}
+      p.text-body-1 {{ item.text }}
+  // 介绍：窄屏
+  .my-8(v-else)
+    v-row(v-for="item in contents" :key="item.title")
+      v-col(cols="10" offset="1")
+        p.text-h4 {{ item.title }}
+        p.text-body-1 {{ item.text }}
+  // 链接：宽屏
+  v-row.my-8(v-if="$vuetify.breakpoint.mdAndUp")
+    v-col(cols="6" offset="3")
+      v-row
+        v-col(cols="4" v-for="item in buttons" :key="item.title")
+          v-btn(:[item.type]="item.link" block x-large color="primary")
+            v-icon(left)
+              | {{ item.icon }}
+            | {{ item.title }}
+  // 链接：窄屏
+  .my-8(v-else)
+    v-row
+      v-col(cols="8" offset="2" v-for="item in buttons" :key="item.title")
+        v-btn(:[item.type]="item.link" block x-large color="primary")
+          v-icon(left)
+            | {{ item.icon }}
+          | {{ item.title }}
 </template>
 
 <script>
@@ -94,7 +66,7 @@ export default {
         },
         {
           title: "加入我们！",
-          text: "我们欢迎任何衡中在校学生，只要你对计算机、数码有兴趣，无论你是小白还是大佬，点击网页底部链接加入我们！",
+          text: "我们欢迎任何衡中在校学生，只要你对计算机、数码有兴趣，无论你是小白还是大佬，点击下方按钮加入我们！",
         },
       ],
       buttons: [
@@ -105,8 +77,8 @@ export default {
           type: "href",
         },
         {
-          icon: "mdi-blogger",
-          title: "博客动态",
+          icon: "mdi-view-list-outline",
+          title: "我们的项目",
           link: "/blog",
           type: "to",
         },

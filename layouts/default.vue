@@ -65,10 +65,6 @@ export default {
           title:"淘宝者 B站",
           href:"https://space.bilibili.com/500799994"
         },
-        {
-          title: "衡水中学",
-          href: "http://hbhz.net/",
-        },
       ],
     };
   },
